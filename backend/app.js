@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 
 const {environment} = require('./config');
 const isProduction = environment === 'production';
+const indexRouter = require('./routes');
 
 const app = express();
 
@@ -19,10 +20,15 @@ if (!isProduction){
 app.use(helmet({
     contentSecurityPolicy: false
 }));
-app.use(csrf(
+app.use(csrf({
     cookie: {
         secure: isProduction,
         sameSite: isProduction && 'Lax',
         httpOnly: true
     }
-));
+}));
+
+app.use(indexRouter);
+
+
+module.exports = app;
