@@ -466,7 +466,27 @@ module.exports = {
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Picture Rocks",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Prescott",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Quartzsite",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Queen Creek",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Red Rock",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Safford",
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -474,7 +494,31 @@ module.exports = {
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Sedona",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Showlow",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Sierra Vista",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Snowflake",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Somerton",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "St. Johns",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Surprise",
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -486,11 +530,27 @@ module.exports = {
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Tuba City",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Tucson",
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Walpi",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Wickenburg",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Willcox",
+        state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Williams",
         state_id: 3, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
