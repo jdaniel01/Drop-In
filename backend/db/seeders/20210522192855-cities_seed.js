@@ -582,6 +582,10 @@ module.exports = {
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Bentonville",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Blytheville",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -598,7 +602,19 @@ module.exports = {
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Dardanelle",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "De Queen",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "El Dorado",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Eureka Springs",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -611,6 +627,10 @@ module.exports = {
     },
     {
         name: "Fort Smith",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Gentry",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -650,6 +670,10 @@ module.exports = {
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Nashville",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Newport",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -662,7 +686,19 @@ module.exports = {
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Paragould",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Piggott",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Pine Bluff",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Pocahontas",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -670,11 +706,27 @@ module.exports = {
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Russellville",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Searcy",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Siloam Springs",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Star City",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Stuttgart",
+        state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Trumann",
         state_id: 4, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {

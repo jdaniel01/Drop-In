@@ -10,4 +10,7 @@ const stateAbbr = faker.locales.en.address.state_abbr;
 
 
 
-{name: "", city_id: 0, state_id: 4, country_id: 1, description: "", image: "", website: '', address: ''},
+
+
+
+{name: "", city_id: 0, state_id: 5, country_id: 1, description: "", image: "", website: '', address: ''},
