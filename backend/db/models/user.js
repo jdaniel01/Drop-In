@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     username: {
-      type: DataTypes.STRING(4, 30),
+      type: DataTypes.STRING(30),
       allowNull: false,
       validate: {
         len: [4, 30],
@@ -80,6 +80,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.associate = function (models) {
     // associations can be defined here
+    User.hasMany(models.Event, {foreignKey: 'host'});
+    User.hasMany(models.Trick, {foreignKey: 'creator'});
   };
   return User;
 };
