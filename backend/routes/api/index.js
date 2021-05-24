@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const sessionRouter = require('./session');
 const usersRouter = require('./users');
+const locationRouter = require('./locations');
+const countryRouter = require('./countries');
 const asyncHandler = require('express-async-handler');
 const {setTokenCookie} = require('../../utils/auth');
 const {User} = require('../../db/models');
@@ -8,7 +10,8 @@ const {restoreUser, requireAuth} = require('../../utils/auth');
 
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
-
+router.use('/locations', locationRouter);
+router.use('/countries', countryRouter);
 //Test Routes below:
 
 // router.get('/set-token-cookie', asyncHandler(async (req, res) => {
