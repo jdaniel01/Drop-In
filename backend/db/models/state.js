@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       unique: true
     },
     country_id: {
-      type: DateTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {model: 'Countries'}
     }
