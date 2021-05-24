@@ -1606,6 +1606,14 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Union City",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Vacaville",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Vallejo",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -1626,7 +1634,15 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Watsonville",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Watts",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Weed",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1638,11 +1654,23 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Willits",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Windsor",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Woodland",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Yorba Linda",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Yreka",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
