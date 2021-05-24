@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         len: [3, 50]
       }
     },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {model: 'Categories'}
+    },
     description: {
       type: DataTypes.TEXT(150),
       allowNull: false,
@@ -27,11 +31,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {model: 'Users'}
-    },
-    prerequisite: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {model: 'Tricks'}
     }
   }, {});
   Trick.associate = function(models) {
@@ -40,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     Trick.belongsTo(models.Sport, {foreignKey: 'sport_id'});
     Trick.belongsTo(models.User, {foreignKey: 'creator'});
     Trick.hasMany(models.Trick, {foreignKey: 'prerequisite'});
+    Trick.belongsTo(models.Category, {foreignKey: 'category_id'})
   };
   return Trick;
 };

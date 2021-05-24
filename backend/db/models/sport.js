@@ -3,14 +3,13 @@ module.exports = (sequelize, DataTypes) => {
   const Sport = sequelize.define('Sport', {
     name: {
       type: DataTypes.STRING(30),
-      validate: {
-        len: [4, 30]
-      },
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: false,
+      unique: true
     }
   }, {});
   Sport.associate = function(models) {

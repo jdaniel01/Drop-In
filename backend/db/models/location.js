@@ -27,7 +27,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     image: {
       type: DataTypes.TEXT,
-      allowNull: true
+    },
+    website: {
+      type: DataTypes.TEXT
+    },
+    address: {
+      type: DataTypes.STRING
     }
   }, {});
   Location.associate = function(models) {

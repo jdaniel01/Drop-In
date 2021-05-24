@@ -18,6 +18,10 @@ module.exports = {
         allowNull: false,
         unique: true
       },
+      category_id: {
+        type: Sequelize.INTEGER,
+        references: {model: 'Categories'}
+      },
       description: {
         type: Sequelize.TEXT(150),
         allowNull: false,
@@ -31,11 +35,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {model: 'Users'}
-      },
-      prerequisite: {
-        type: Sequelize.INTEGER,
-        references: {model: 'Tricks'},
-        allowNull: true
       },
       createdAt: {
         allowNull: false,

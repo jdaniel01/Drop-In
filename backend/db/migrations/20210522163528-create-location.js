@@ -34,7 +34,12 @@ module.exports = {
       },
       image: {
         type: Sequelize.TEXT,
-        allowNull: true
+      },
+      website: {
+        type: Sequelize.TEXT
+      },
+      address: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
