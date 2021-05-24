@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING(40),
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true
       },
@@ -29,7 +29,7 @@ module.exports = {
         references: {model: 'Countries'}
       },
       description: {
-        type: Sequelize.TEXT(500),
+        type: Sequelize.TEXT,
         allowNull: false
       },
       image: {
@@ -39,7 +39,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       address: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

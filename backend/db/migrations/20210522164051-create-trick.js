@@ -27,15 +27,6 @@ module.exports = {
         allowNull: false,
         unique: true
       },
-      pads: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false
-      },
-      creator: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {model: 'Users'}
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

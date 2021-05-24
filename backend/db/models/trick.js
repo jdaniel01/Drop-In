@@ -23,21 +23,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true
     },
-    pads: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    },
-    creator: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {model: 'Users'}
-    }
   }, {});
   Trick.associate = function(models) {
     // associations can be defined here
     Trick.belongsTo(models.Trick, {foreignKey: 'prerequisite'});
     Trick.belongsTo(models.Sport, {foreignKey: 'sport_id'});
-    Trick.belongsTo(models.User, {foreignKey: 'creator'});
     Trick.hasMany(models.Trick, {foreignKey: 'prerequisite'});
     Trick.belongsTo(models.Category, {foreignKey: 'category_id'})
   };

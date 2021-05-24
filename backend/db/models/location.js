@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Location = sequelize.define('Location', {
     name: {
-      type: DataTypes.STRING(40)},
+      type: DataTypes.STRING(100)},
       allowNull: false,
       unique: true
       ,
@@ -17,12 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       references: {model: 'States'}
     },
     country_id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {model: 'Countries'}
     },
     description: {
-      type: DataTypes.TEXT(500),
+      type: DataTypes.TEXT,
       allowNull: false
     },
     image: {
