@@ -746,7 +746,15 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "American Canyon",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Anaheim",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Anderson",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -755,6 +763,26 @@ module.exports = {
     },
     {
         name: "Arcadia",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Arcata",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Atascadero",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Atwater",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Auburn",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Avenal",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -770,6 +798,10 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Benicia",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Berkeley",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -778,7 +810,23 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Biggs",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Bishop",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Bolinas",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Brea",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Brentwood",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -798,11 +846,39 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Cameron Park",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Campbell",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Capitola",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Carlsbad",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Carmel",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Carmichael",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Castro Valley",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Castroville",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Ceres",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -814,7 +890,23 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Citrus Heights",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Claremont",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Clearlake",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Cloverdale",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Clovis",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -826,6 +918,10 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Corning",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Corona",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -834,7 +930,15 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Corte Madera",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Costa Mesa",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Crescent City",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -850,7 +954,27 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Delano",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Delhi",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Dixon",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Downey",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Dublin",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "East Oakland",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -859,6 +983,14 @@ module.exports = {
     },
     {
         name: "El Cerrito",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "El Dorado Hills",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Elk Grove",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -878,6 +1010,14 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Firebaugh",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Folsom",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Fontana",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -894,7 +1034,15 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Galt",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Garden Grove",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Gilroy",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -902,7 +1050,39 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Gonzales",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Grass Valley",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Greenfield",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Gridley",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Groveland",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Hanford",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Hayward",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Healdsburg",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Hollister",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -922,7 +1102,15 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Ione",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Irvine",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "King City",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -938,6 +1126,18 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Lathrop",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Lemoore",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Lincoln",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Livermore",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -950,6 +1150,10 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Lone Pine",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Long Beach",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -958,7 +1162,31 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Loyalton",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Madera",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Malibu",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Mammoth lakes",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Mantica",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Marina",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Mariposa",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -970,6 +1198,10 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Mather",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Menlo Park",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -978,11 +1210,27 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Mill Valley",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Modesto",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Monterey",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Moraga",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Morgan Hill",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Morro Bay",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -998,6 +1246,10 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Newark",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Newport Beach",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -1007,6 +1259,10 @@ module.exports = {
     },
     {
         name: "Novato",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Oakhurst",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1030,11 +1286,19 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Orange Cove",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Oroville",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Oxnard",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Pacifica",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1062,11 +1326,31 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Piedmont",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Placerville",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Pleasanton",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Pomona",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Port Hueneme",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Portola",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Quincy",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1098,7 +1382,23 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Rio Vista",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Ripon",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Riverbank",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Riverside",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Rocklin",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1150,6 +1450,10 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "San Lorenzo",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "San Luis Obispo",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -1167,6 +1471,10 @@ module.exports = {
     },
     {
         name: "San Rafael",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "San Ramon",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1206,7 +1514,31 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Scotts Valley",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Sebastopol",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Selma",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Shafter",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Shasta Lake City",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Simi Valley",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Soledad",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1214,7 +1546,19 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Sonora",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "South Lake Tahoe",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "South San Francisco",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "St. Helena",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -1230,11 +1574,27 @@ module.exports = {
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
+        name: "Templeton",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
         name: "Thousand Oaks",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
         name: "Torrance",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Tracy",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Truckee",
+        state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
+    },
+    {
+        name: "Tulare",
         state_id: 5, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
