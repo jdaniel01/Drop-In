@@ -1,5 +1,4 @@
 import {csrfFetch} from './csrf';
-import {useSelector} from 'react-redux';
 
 export const LOAD_LOCATIONS = 'locations/LOAD_LOCATIONS';
 
@@ -23,11 +22,11 @@ const initialState = {};
 const locationsReducer = (state = initialState, action) => {
     switch (action.locations) {
         case LOAD_LOCATIONS: {
-            const locations = {};
+            const newLocations = {};
             action.locations.forEach(location => {
-                locations[location.id] = location;
+                newLocations[location.id] = location;
             });
-            return {...state, ...locations}
+            return {...state, ...newLocations}
         }
         default:
             return state;

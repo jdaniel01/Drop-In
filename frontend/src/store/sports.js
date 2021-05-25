@@ -7,12 +7,12 @@ const loadSports = (sports) => ({
     sports,
 });
 
-export const getSports = (id) => async dispatch => {
+export const getSports = () => async dispatch => {
     const response = await csrfFetch(`/api/sports`)
 
     if(response.ok) {
         const sports = await response.json();
-        dispatch(loadSports(sports, id));
+        dispatch(loadSports(sports));
     }
 };
 
@@ -21,11 +21,11 @@ const initialState = {};
 const sportsReducer = (state = initialState, action) => {
     switch (action.sports) {
         case LOAD_SPORTS: {
-            const sports = {};
+            const newSports = {};
             action.sports.forEach(sport => {
-                sports[sport.id] = sport;
+                newSports[sport.id] = sport;
             });
-            return {...state, ...sports}
+            return {...state, ...newSports}
         }
         default:
             return state;
