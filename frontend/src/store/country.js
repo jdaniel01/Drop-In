@@ -1,5 +1,4 @@
 import { csrfFetch } from './csrf';
-import {GET_STATES} from './states';
 
 
 const LOAD_COUNTRIES = 'country/LOAD_COUNTRIES';
@@ -20,12 +19,11 @@ export const getAllCountries = () => async dispatch => {
 }
 
 const initialState = {
-    countries: null,
-    states: [],
+    countries: [],
 }
 
 
-const countryReducer = (state = initialState, action) => {
+const countriesReducer = (state = initialState, action) => {
     switch(action.type) {
         case LOAD_COUNTRIES: {
             const allCountries = {};
@@ -41,4 +39,4 @@ const countryReducer = (state = initialState, action) => {
     }
 }
 
-export default countryReducer;
+export default countriesReducer;

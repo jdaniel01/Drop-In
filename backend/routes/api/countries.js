@@ -1,7 +1,6 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const {Country, State, City} = require('../../db/models');
-const state = require('../../db/models/state');
 const router = express.Router();
 
 
