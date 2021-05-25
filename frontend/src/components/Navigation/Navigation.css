@@ -1,0 +1,38 @@
+body {
+    margin: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: yellowgreen;
+    border-bottom: .5em solid indianred;
+    height: 3rem;
+    padding: .5em;
+}
+
+.logo-wrapper {
+    display: flex;
+    background-color: rgb(250, 225, 4);
+    justify-content: center;
+}
+
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border-radius: .3em;
+}
+
+.nav-link:hover {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border: 1px solid indianred;
+    background-color: rgb(250, 225, 4);
+    border-radius: .3em;
+}

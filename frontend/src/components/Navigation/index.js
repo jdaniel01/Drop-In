@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
+import fullLogo from './images/dropInFull.png'
 import './Navigation.css';
 
 function Navigation({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
+    const history = useHistory();
 
     let sessionLinks;
     if (sessionUser) {
@@ -17,18 +19,20 @@ function Navigation({ isLoaded }) {
         sessionLinks = (
             <>
                 <LoginFormModal />
-                <NavLink to="/signup">Sign Up</NavLink>
+                <div className="nav-link" to="/signup">Sign Up</div>
             </>
         );
     }
 
     return (
-        <ul>
-            <li>
-                <NavLink exact to="/">Home</NavLink>
+        <div>
+            <nav className="nav-wrapper">
                 {isLoaded && sessionLinks}
-            </li>
-        </ul>
+            </nav>
+            <div className="logo-wrapper">
+                <img className="logo" src={fullLogo} onClick={() => history.push('/')}/>
+            </div>
+        </div>
     );
 }
 
