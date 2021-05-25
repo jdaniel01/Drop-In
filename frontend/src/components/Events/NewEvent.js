@@ -13,6 +13,10 @@ const NewEvent = () => {
 
     const sports = Array(useSelector(state => state.sports));
     const countries = Array(useSelector(state => state.countries));
+    const states = Array(useSelector(state => state.states));
+    const cities = Array(useSelector(state => state.cities));
+    const locations = Array(useSelector(state => state.locations));
+
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -42,7 +46,7 @@ const NewEvent = () => {
     useEffect(() => {
         dispatch(getCountries());
         dispatch(getSports());
-        
+
     }, [dispatch])
 
     useEffect(() => {
@@ -57,11 +61,14 @@ const NewEvent = () => {
         dispatch(getLocations(city))
     }, [city])
 
+    if (name && country && state && city && location && sport && description){
+        setIsDisabled(false);
+    }
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        //TODO: send to database.
     }
 
     return (
