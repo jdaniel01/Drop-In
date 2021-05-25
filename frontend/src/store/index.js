@@ -1,11 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import sessionReducer from './session';
-import countriesReducer from './countrys';
+import countriesReducer from './countries';
 import statesReducer from './states';
-import citiesReducer from './citys';
+import citiesReducer from './cities';
 import locationsReducer from './locations';
 import sportsReducer from './sports';
+import tricksReducer from "./tricks";
 
 const rootReducer = combineReducers({
   // add reducer functions here
@@ -14,6 +15,8 @@ const rootReducer = combineReducers({
   states: statesReducer,
   cities: citiesReducer,
   locations: locationsReducer,
+  sports: sportsReducer,
+  tricks: tricksReducer
 });
 
 let enhancer;

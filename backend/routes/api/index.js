@@ -1,8 +1,11 @@
 const router = require('express').Router();
 const sessionRouter = require('./session');
 const usersRouter = require('./users');
-const locationRouter = require('./locations');
-const countryRouter = require('./countries');
+const locationsRouter = require('./locations');
+const countriesRouter = require('./countries');
+const statesRouter = require('./states');
+const citiesRouter = require('./cities');
+const sportsRouter = require('./sports');
 const asyncHandler = require('express-async-handler');
 const {setTokenCookie} = require('../../utils/auth');
 const {User} = require('../../db/models');
@@ -10,8 +13,12 @@ const {restoreUser, requireAuth} = require('../../utils/auth');
 
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
-router.use('/locations', locationRouter);
-router.use('/countries', countryRouter);
+router.use('/locations', locationsRouter);
+router.use('/countries', countriesRouter);
+router.use('/cities', citiesRouter);
+router.use('/states', statesRouter);
+router.use('/sports', sportsRouter);
+
 //Test Routes below:
 
 // router.get('/set-token-cookie', asyncHandler(async (req, res) => {

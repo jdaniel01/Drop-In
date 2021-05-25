@@ -23,6 +23,10 @@ const validateLocation = [
     handleValidationErrors
 ]
 
+router.get('/', asyncHandler(async (req, res) => {
+    const locations = await Location.findAll();
+    return res.json(locations);
+}))
 
 router.post('/', validateLocation, asyncHandler(async (req, res, next)=> {
     const {name, city_id, state_id, country_id, description, image, website, address} = req.body;

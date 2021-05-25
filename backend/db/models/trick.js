@@ -26,9 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Trick.associate = function(models) {
     // associations can be defined here
-    Trick.belongsTo(models.Trick, {foreignKey: 'prerequisite'});
     Trick.belongsTo(models.Sport, {foreignKey: 'sport_id'});
-    Trick.hasMany(models.Trick, {foreignKey: 'prerequisite'});
     Trick.belongsTo(models.Category, {foreignKey: 'category_id'})
   };
   return Trick;

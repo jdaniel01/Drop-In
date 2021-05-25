@@ -1,6 +1,6 @@
 import { csrfFetch } from "./csrf";
 
-export const LOAD_SPORTS = 'SPORTS/LOAD_SPORTS';
+export const LOAD_SPORTS = 'sports/LOAD_SPORTS';
 
 const loadSports = (sports) => ({
     type: LOAD_SPORTS,
