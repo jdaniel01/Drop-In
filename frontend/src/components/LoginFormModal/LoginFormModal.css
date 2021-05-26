@@ -1,1 +1,16 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    padding: 5rem;
+}
 
+.login-form {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2em;
+    background-color: yellowgreen;
+    border: .5em solid indianred;
+    border-radius: .3rem;
+}

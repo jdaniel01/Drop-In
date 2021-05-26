@@ -19,7 +19,7 @@ export const getTricks = (id) => async dispatch => {
 const initialState = {};
 
 const tricksReducer = (state = initialState, action) => {
-    switch(action.tricks) {
+    switch(action.type) {
         case LOAD_TRICKS: {
             const tricks = {};
             action.tricks.forEach(trick => {

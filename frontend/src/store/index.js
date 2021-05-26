@@ -11,11 +11,11 @@ import tricksReducer from "./tricks";
 const rootReducer = combineReducers({
   // add reducer functions here
   session: sessionReducer,
+  sports: sportsReducer,
   countries: countriesReducer,
   states: statesReducer,
   cities: citiesReducer,
   locations: locationsReducer,
-  sports: sportsReducer,
   tricks: tricksReducer
 });
 

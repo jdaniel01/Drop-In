@@ -1,8 +1,12 @@
 
-.intro {
+.link-component {
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
+    background-color: yellowgreen;
+    border: .5em solid indianred;
+    border-radius: .3rem;
+    padding: 1em;
 }
 
 .button {
@@ -13,6 +17,11 @@
 .home-wrapper {
     display: flex;
     justify-content: center;
-    align-content: center;
-    justify-items: center;
+    margin: 2em;
+}
+
+.home-wrapper > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

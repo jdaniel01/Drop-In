@@ -1,24 +1,20 @@
-.form-wrapper {
+.about-wrapper {
+    margin: 4em;
+    padding: 2em;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     flex-flow: column wrap;
-    padding: 5rem;
 }
 
-.signup-form {
-    display: flex;
-    flex-flow: column wrap;
+.about {
     padding: 2em;
-    background-color: yellowgreen;
-    border: .5em solid indianred;
-    border-radius: .3rem;
-}
-
-p {
-    height: 1em;
-    padding: 0px;
-    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color:yellowgreen;
+    width: 60%;
 }
 
 .nav-link {
@@ -28,6 +24,7 @@ p {
     border-radius: .3rem;
     width: fit-content;
 }
+
 
 .nav-link:hover {
     display: flex;

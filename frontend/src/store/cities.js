@@ -20,7 +20,7 @@ export const getCities = (id) => async dispatch => {
 const initialState = {};
 
 const citiesReducer = (state = initialState, action) => {
-    switch (action.cities) {
+    switch (action.type) {
         case LOAD_CITIES: {
             const cities = {};
             action.cities.forEach(city => {

@@ -19,7 +19,7 @@ export const getSports = () => async dispatch => {
 const initialState = {};
 
 const sportsReducer = (state = initialState, action) => {
-    switch (action.sports) {
+    switch (action.type) {
         case LOAD_SPORTS: {
             const newSports = {};
             action.sports.forEach(sport => {

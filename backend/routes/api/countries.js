@@ -9,8 +9,9 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 router.get('/:id/states', asyncHandler(async (req, res) => {
-    const {id} = req.params;
+    const id = req.params.id;
     let states = await State.findAll({where: {country_id: id}});
+    console.log(states);
     return res.json(states);
 }))
 

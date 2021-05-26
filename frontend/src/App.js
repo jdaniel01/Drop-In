@@ -6,6 +6,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Home from './components/Home';
 import NewEvent from './components/Events/NewEvent';
+import About from './components/About';
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/events/new">
             <NewEvent />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
         </Switch>
       )}

@@ -20,7 +20,7 @@ export const getLocations = (id) => async dispatch => {
 const initialState = {};
 
 const locationsReducer = (state = initialState, action) => {
-    switch (action.locations) {
+    switch (action.type) {
         case LOAD_LOCATIONS: {
             const newLocations = {};
             action.locations.forEach(location => {

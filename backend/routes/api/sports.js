@@ -1,6 +1,6 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const {Sport, Category} = require('../../db/models');
+const { Sport, Trick } = require('../../db/models');
 const router = express.Router();
 
 
@@ -9,15 +9,15 @@ router.get('/', asyncHandler(async (req, res) => {
     return res.json(sports);
 }));
 
-router.get('/:id/tricks', asyncHandler( async (req, res) => {
-    const {id} = req.params;
-    const tricks = await findAll({where: {sport_id: id}});
+router.get('/:id/tricks', asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    const tricks = await Trick.findAll({ where: { sport_id: id } });
     return res.json(tricks);
 }));
 
-router.get('/:id/tricks/:category', asyncHandler( async (req, res) => {
-    const {id, category} = req.params;
-    const tricks = await findAll({where: {sport_id: id, category_id: category}});
+router.get('/:id/tricks/:category', asyncHandler(async (req, res) => {
+    const { id, category } = req.params;
+    const tricks = await Trick.findAll({ where: { sport_id: id, category_id: category } });
     return res.json(tricks);
 }));
 

@@ -11,31 +11,28 @@ import { v4 as uuidv4 } from 'uuid';
 
 const NewEvent = () => {
 
-    const sports = Array(useSelector(state => state.sports));
-    const countries = Array(useSelector(state => state.countries));
-    const states = Array(useSelector(state => state.states));
-    const cities = Array(useSelector(state => state.cities));
-    const locations = Array(useSelector(state => state.locations));
+    const sports = useSelector(state => Object.values(state.sports));
+    const countries = useSelector(state => Object.values(state.countries));
+    const states = useSelector(state => Object.values(state.states));
+    const cities = useSelector(state => Object.values(state.cities));
+    const locations = useSelector(state => Object.values(state.locations));
 
 
     const dispatch = useDispatch();
     const history = useHistory();
 
     const [location, setLocation] = useState(false);
-    const [country, setCountry] = useState(false);
-    const [state, setState] = useState(false);
+    const [country, setCountry] = useState(countries[0]);
+    const [state1, setState] = useState(false);
     const [city, setCity] = useState(false);
-    const [sport, setSport] = useState(false);
+    const [sport, setSport] = useState(sports[0]);
     const [name, setName] = useState('');
     const [description, setDescription] = useState('')
     const [isDisabled, setIsDisabled] = useState(true);
 
 
     const updateName = (e) => setName(e.target.value);
-    const updateCountry = (e) => {
-        setCountry(e.target.value);
-        dispatch(getStates(country));
-    };
+    const updateCountry = (e) => setCountry(e.target.value);
     const updateState = (e) => setState(e.target.value);
     const updateCity = (e) => setCity(e.target.value);
     const updateLocation = (e) => setLocation(e.target.value);
@@ -49,20 +46,20 @@ const NewEvent = () => {
     useEffect(() => {
         dispatch(getCountries());
         dispatch(getSports());
-
     }, [dispatch])
 
     useEffect(() => {
         if (country) {
             dispatch(getStates(country));
         }
+        console.log(country);
     }, [country, dispatch])
 
     useEffect(() => {
-        if (state) {
-            dispatch(getCities(state))
+        if (state1) {
+            dispatch(getCities(state1))
         }
-    }, [state, dispatch])
+    }, [state1, dispatch])
 
     useEffect(() => {
         if (city) {
@@ -70,7 +67,7 @@ const NewEvent = () => {
         }
     }, [city, dispatch])
 
-    if (name && country && state && city && location && sport && description) {
+    if (name && country && state1 && city && location && sport && description) {
         setIsDisabled(false);
     }
 
@@ -79,6 +76,8 @@ const NewEvent = () => {
         e.preventDefault();
         //TODO: send to database.
     }
+
+    console.log(country, states)
 
     return (
         <div className="form-wrapper">
@@ -93,18 +92,18 @@ const NewEvent = () => {
                 <label htmlFor="country_id">Session Country</label>
                 <select id="country_id" name="country_id" value={country} onChange={updateCountry}>
                     <option>Choose a country for your session</option>
-                    {countries.map(country => <option key={uuidv4()} value={country.id}>{country.name}</option>)}
+                    {countries.map(country => <option key={uuidv4()} value={Number(country.id)}>{country.name}</option>)}
                 </select>
                 {country &&
                     <>
                         <label htmlFor="state_id">Session State</label>
-                        <select id="state_id" name="state_id" value={state} onChange={updateState}>
+                        <select id="state_id" name="state_id" value={state1} onChange={updateState}>
                             <option>Choose a state for your session</option>
-                            {states.map(state => <option key={uuidv4()} value={state.id}>{state.name}</option>)}
+                            {states.map(state2 => <option key={uuidv4()} value={state2.id}>{state2.name}</option>)}
                         </select>
                     </>
                 }
-                {state &&
+                {state1 &&
                     <>
                         <label htmlFor="city_id">Session City</label>
                         <select id="city_id" name="city_id" value={city} onChange={updateCity}>
