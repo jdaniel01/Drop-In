@@ -19,7 +19,7 @@ function Navigation({ isLoaded }) {
         sessionLinks = (
             <>
                 <LoginFormModal />
-                <div className="nav-link" to="/signup">Sign Up</div>
+                <div className="nav-link" onClick={() => history.push('/signup')}>Sign Up</div>
             </>
         );
     }
@@ -30,7 +30,7 @@ function Navigation({ isLoaded }) {
                 {isLoaded && sessionLinks}
             </nav>
             <div className="logo-wrapper">
-                <img className="logo" src={fullLogo} onClick={() => history.push('/')} alt="Drop-In logo with 3 silhouettes. One skateboarder, one BMX rider, one scooter rider."/>
+                <img className="logo" src={fullLogo} onClick={()=> history.push('/')} alt="Drop-In logo with 3 silhouettes. One skateboarder, one BMX rider, one scooter rider."/>
             </div>
         </div>
     );
