@@ -52,9 +52,9 @@ router.get('/', asyncHandler(async (req, res) => {
 router.post('/', validateLocation, asyncHandler(async (req, res)=> {
     const {name, city_id, state_id, country_id, description, image, website, address} = req.body;
 
-        const location = {name, city_id, state_id, country_id, description, image, website, address};
-        let data = await Location.create(location);
-        res.redirect(`/${data.id}`);
+        const data = {name, city_id, state_id, country_id, description, image, website, address};
+        let location = await Location.create(data);
+        return res.json(location);
 }));
 
 router.get('/:id', asyncHandler(async (req, res) => {

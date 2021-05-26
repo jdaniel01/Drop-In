@@ -7,6 +7,7 @@ import citiesReducer from './cities';
 import locationsReducer from './locations';
 import sportsReducer from './sports';
 import tricksReducer from "./tricks";
+import eventsReducer from './events';
 
 const rootReducer = combineReducers({
   // add reducer functions here
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
   states: statesReducer,
   cities: citiesReducer,
   locations: locationsReducer,
-  tricks: tricksReducer
+  tricks: tricksReducer,
+  events: eventsReducer
 });
 
 let enhancer;

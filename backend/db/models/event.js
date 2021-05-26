@@ -25,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {model: 'Locations'}
+    },
+    when: {
+      type: DataTypes.DATE,
+      allowNull: false
     }
   }, {});
   Event.associate = function(models) {

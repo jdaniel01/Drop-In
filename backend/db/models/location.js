@@ -2,10 +2,10 @@
 module.exports = (sequelize, DataTypes) => {
   const Location = sequelize.define('Location', {
     name: {
-      type: DataTypes.STRING(100)},
+      type: DataTypes.STRING(100),
       allowNull: false,
       unique: true
-      ,
+    },
     city_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
   Location.associate = function(models) {
     // associations can be defined here
     Location.belongsTo(models.State, {foreignKey: 'state_id'});
-    Location.belongsTo(models.City, {foreginKey: "city_id"});
+    Location.belongsTo(models.City, {foreignKey: "city_id"});
     Location.belongsTo(models.Country, {foreignKey: 'country_id'});
     Location.hasMany(models.Event, {foreignKey: 'location_id'});
   };
