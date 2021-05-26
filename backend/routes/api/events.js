@@ -69,7 +69,7 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 router.post('/', asyncHandler(async (req, res) => {
-    // console.log(req.body);
+    console.log(req.body.parameters);
     const { host, name, sport_id, location_id, when } = req.body;
     let event = await Event.create({ host, name, sport_id, location_id, when });
     console.log(event);

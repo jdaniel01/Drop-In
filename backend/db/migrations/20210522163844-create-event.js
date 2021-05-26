@@ -23,6 +23,11 @@ module.exports = {
         references: {model: "Locations"},
         allowNull: false
       },
+      sport_id: {
+        type: Sequelize.INTEGER,
+        references: {model: "Sports"},
+        allowNull: false
+      },
       when: {
         type: Sequelize.DATE,
         allowNull: false
