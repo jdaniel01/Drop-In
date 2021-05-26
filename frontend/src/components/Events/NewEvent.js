@@ -84,10 +84,11 @@ const NewEvent = () => {
             when: date
         }
 
-        let newEvent = await dispatch(addOneEvent(event));
+        let newEvent1 = await dispatch(addOneEvent(event));
 
-        if (newEvent) {
-            history.push(`/events/${newEvent.id}`)
+        if (newEvent1) {
+            // history.push(`/events/${newEvent1.id}`)
+            console.log(newEvent1);
         }
     }
 
@@ -100,7 +101,7 @@ const NewEvent = () => {
                 <label htmlFor="sport_id">Choose A Sport</label>
                 <select id="sport_id" name="sport_id" value={sport} onChange={updateSport}>
                     <option value={false}>Choose a sport</option>
-                    {sports.map(sport => <option key={uuidv4()} value={sport.id}>{sport.name}</option>)}
+                    {sports.map(sport => <option key={uuidv4()} value={Number(sport.id)}>{sport.name}</option>)}
                 </select>
 
                 <label htmlFor="when">Session Date</label>
@@ -138,7 +139,7 @@ const NewEvent = () => {
                         <label htmlFor="location_id">Session Location</label>
                         <select id="location_id" name="location_id" value={location} onChange={updateLocation}>
                             <option value={false}>Please chooose a location</option>
-                            {locations.map(location1 => <option key={uuidv4()} value={location1.id}>{location1.name}</option>)}
+                            {locations.map(location1 => <option key={uuidv4()} value={Number(location1.id)}>{location1.name}</option>)}
                         </select>
                         <p>Don't see the location you're looking for? Click <span onClick={() => history.push('/locations/new')}>here</span> to add a new location.</p>
 

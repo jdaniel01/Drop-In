@@ -6,6 +6,7 @@ const countriesRouter = require('./countries');
 const statesRouter = require('./states');
 const citiesRouter = require('./cities');
 const sportsRouter = require('./sports');
+const eventsRouter = require('./events');
 const asyncHandler = require('express-async-handler');
 const {setTokenCookie} = require('../../utils/auth');
 const {User} = require('../../db/models');
@@ -18,6 +19,7 @@ router.use('/countries', countriesRouter);
 router.use('/cities', citiesRouter);
 router.use('/states', statesRouter);
 router.use('/sports', sportsRouter);
+router.use('/events', eventsRouter);
 
 //Test Routes below:
 
