@@ -4228,8 +4228,7 @@ module.exports = {
     {
         name: "Worcester",
         state_id: 21, country_id: 1, createdAt: new Date(), updatedAt: new Date()
-    }
-,
+    },
     {
         name: "Adrian",
         state_id: 22, country_id: 1, createdAt: new Date(), updatedAt: new Date()
@@ -4576,10 +4575,6 @@ module.exports = {
     },
     {
         name: "Stillwater",
-        state_id: 23, country_id: 1, createdAt: new Date(), updatedAt: new Date()
-    },
-    {
-        name: 46,
         state_id: 23, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -6039,10 +6034,6 @@ module.exports = {
         state_id: 33, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
-        name: 47,
-        state_id: 33, country_id: 1, createdAt: new Date(), updatedAt: new Date()
-    },
-    {
         name: "Wilmington",
         state_id: 33, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -6172,10 +6163,6 @@ module.exports = {
     },
     {
         name: "Defiance",
-        state_id: 35, country_id: 1, createdAt: new Date(), updatedAt: new Date()
-    },
-    {
-        name: 8,
         state_id: 35, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
@@ -6839,10 +6826,6 @@ module.exports = {
         state_id: 38, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {
-        name: 14,
-        state_id: 38, country_id: 1, createdAt: new Date(), updatedAt: new Date()
-    },
-    {
         name: "Jeannette",
         state_id: 38, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
@@ -6984,10 +6967,6 @@ module.exports = {
     },
     {
         name: "Warren",
-        state_id: 38, country_id: 1, createdAt: new Date(), updatedAt: new Date()
-    },
-    {
-        name: 47,
         state_id: 38, country_id: 1, createdAt: new Date(), updatedAt: new Date()
     },
     {

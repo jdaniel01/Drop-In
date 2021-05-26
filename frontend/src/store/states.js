@@ -24,9 +24,9 @@ const statesReducer = (state = initialState, action) => {
         case LOAD_STATES: {
             const newStates = {};
             action.states.forEach(state2 => {
-                newStates[state.id] = state2;
+                newStates[state2.id] = state2;
             })
-            return {...state, ...newStates}
+            return newStates;
         }
         default:
             return state;

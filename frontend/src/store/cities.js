@@ -2,10 +2,9 @@ import { csrfFetch } from "./csrf";
 
 export const LOAD_CITIES = 'cities/LOAD_CITIES';
 
-const loadCities = (cities, stateId) => ({
+const loadCities = (cities) => ({
     type: LOAD_CITIES,
-    cities,
-    stateId
+    cities
 });
 
 export const getCities = (id) => async dispatch => {
@@ -13,7 +12,7 @@ export const getCities = (id) => async dispatch => {
 
     if(response.ok) {
         const cities = await response.json();
-        dispatch(loadCities(cities, id));
+        dispatch(loadCities(cities));
     }
 };
 
@@ -26,7 +25,7 @@ const citiesReducer = (state = initialState, action) => {
             action.cities.forEach(city => {
                 cities[city.id] = city;
             });
-            return {...state, ...cities}
+            return cities
         }
         default:
             return state;

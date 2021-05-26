@@ -52,7 +52,6 @@ const NewEvent = () => {
         if (country) {
             dispatch(getStates(country));
         }
-        console.log(country);
     }, [country, dispatch])
 
     useEffect(() => {
@@ -77,7 +76,7 @@ const NewEvent = () => {
         //TODO: send to database.
     }
 
-    console.log(country, states)
+    console.log(city, locations)
 
     return (
         <div className="form-wrapper">
@@ -99,7 +98,7 @@ const NewEvent = () => {
                         <label htmlFor="state_id">Session State</label>
                         <select id="state_id" name="state_id" value={state1} onChange={updateState}>
                             <option>Choose a state for your session</option>
-                            {states.map(state2 => <option key={uuidv4()} value={state2.id}>{state2.name}</option>)}
+                            {states.map(state2 => <option key={uuidv4()} value={Number(state2.id)}>{state2.name}</option>)}
                         </select>
                     </>
                 }
@@ -108,7 +107,7 @@ const NewEvent = () => {
                         <label htmlFor="city_id">Session City</label>
                         <select id="city_id" name="city_id" value={city} onChange={updateCity}>
                             <option>Choose a city for your session</option>
-                            {cities.map(city => <option key={uuidv4()} value={city.id}>{city.name}</option>)}
+                            {cities.map(city1 => <option key={uuidv4()} value={Number(city1.id)}>{city1.name}</option>)}
                         </select>
                     </>
                 }
@@ -117,7 +116,7 @@ const NewEvent = () => {
                         <label htmlFor="location_id">Session Location</label>
                         <select id="location_id" name="location_id" value={location} onChange={updateLocation}>
                             <option>Please chooose a location</option>
-                            {locations.map(location => <option key={uuidv4()} value={location.id}>{location.name}</option>)}
+                            {locations.map(location1 => <option key={uuidv4()} value={location1.id}>{location1.name}</option>)}
                         </select>
                         <p>Don't see the location you're looking for? Click <span onClick={() => history.push('/locations/new')}>here</span> to add a new location.</p>
 

@@ -10,7 +10,7 @@ router.get('/', asyncHandler(async (req, res) => {
 }))
 
 router.get('/:id/locations', asyncHandler(async (req, res) => {
-    const {id} = req.params;
+    const id = req.params.id;
     const locations = await Location.findAll({where: {city_id: id}});
     return res.json(locations);
 }))
