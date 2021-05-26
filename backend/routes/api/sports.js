@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', asyncHandler(async (req, res) => {
     const sports = await Sport.findAll();
-    res.json(sports);
+    return res.json(sports);
 }));
 
 router.get('/:id/tricks', asyncHandler( async (req, res) => {

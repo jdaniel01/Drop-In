@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
@@ -30,7 +30,7 @@ function Navigation({ isLoaded }) {
                 {isLoaded && sessionLinks}
             </nav>
             <div className="logo-wrapper">
-                <img className="logo" src={fullLogo} onClick={() => history.push('/')}/>
+                <img className="logo" src={fullLogo} onClick={() => history.push('/')} alt="Drop-In logo with 3 silhouettes. One skateboarder, one BMX rider, one scooter rider."/>
             </div>
         </div>
     );

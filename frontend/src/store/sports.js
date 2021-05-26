@@ -8,9 +8,9 @@ const loadSports = (sports) => ({
 });
 
 export const getSports = () => async dispatch => {
-    const response = await csrfFetch(`/api/sports`)
+    const response = await csrfFetch(`/api/sports`);
 
-    if(response.ok) {
+    if (response.ok) {
         const sports = await response.json();
         dispatch(loadSports(sports));
     }
@@ -25,7 +25,7 @@ const sportsReducer = (state = initialState, action) => {
             action.sports.forEach(sport => {
                 newSports[sport.id] = sport;
             });
-            return {...state, ...newSports}
+            return { ...state, ...newSports }
         }
         default:
             return state;
