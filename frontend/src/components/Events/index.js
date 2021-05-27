@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { selectOneEvent } from '../../store/events';
-import { joinSession } from '../../store/attendees';
+import { addOneRider } from '../../store/riders';
 import { useEffect, useState } from 'react';
 import './Events.css';
 
@@ -37,7 +37,7 @@ const Event = () => {
                 <h3>Session Details:</h3>
                 <div>{event?.description}</div>
             </div>
-            <div onClick={() => dispatch(joinSession(user))}>Join Session</div>
+            <div onClick={() => dispatch(addOneRider(event?.id, user))}>Join Session</div>
             <div className="image-wrapper">
                 <img src={location?.image} />
             </div>

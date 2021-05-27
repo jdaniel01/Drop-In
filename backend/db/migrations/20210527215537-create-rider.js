@@ -18,11 +18,6 @@ module.exports = {
         allowNull: false,
         references: {model: "Events"}
       },
-      sport_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {model: "Sports"}
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

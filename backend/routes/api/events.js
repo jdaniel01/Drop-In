@@ -1,7 +1,8 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check } = require('express-validator');
-const { Event, User, Sport, Location, Country, City, State } = require('../../db/models');
+const { noExtendLeft } = require('sequelize/types/lib/operators');
+const { Rider, Event, User, Sport, Location, Country, City, State } = require('../../db/models');
 const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
@@ -75,14 +76,45 @@ router.post('/', asyncHandler(async (req, res) => {
 }));
 
 router.get('/dates', asyncHandler(async (req, res) => {
-    const events = await Event.findAll({order: ['when'], limit: 20, include: [User, Location]})
+    const events = await Event.findAll({ order: ['when'], limit: 20, include: [User, Location] })
     return res.json(events);
-}))
+}));
 
 router.get('/:id', asyncHandler(async (req, res) => {
-    const event = await Event.findOne({where: {id: req.params.id}, include: [User, Location, Sport]});
-    const location = await Location.findOne({where: {id: event.location_id}, include: [Country, City, State]})
-    return res.json({event, location});
-}))
+    const event = await Event.findOne({ where: { id: req.params.id }, include: [User, Location, Sport] });
+    const location = await Location.findOne({ where: { id: event.location_id }, include: [Country, City, State] })
+    return res.json({ event, location });
+}));
+
+router.get('/:id/riders', asyncHandler(async (req, res) => {
+    const id = req.params.id;
+    const riders = await Rider.findAll({ where: { event_id: id } });
+    return res.json(riders);
+}));
+
+router.post('/:id/riders', asyncHandler(async (req, res, next) => {
+    const id = req.params.id;
+    const { user } = req.body;
+    let test = await Rider.findOne({ where: { event_id: id, user_id: user.id } });
+    if (!test) {
+        await Rider.create({ user_id: user.id, event_id: id })
+        const riders = await Rider.findAll({ where: { event_id: id } });
+        return res.json(riders);
+    }
+    else {
+        const error = new Error("Rider has already joined session.");
+        next(error);
+    }
+}));
+
+router.delete('/:id/riders/:riderId', asyncHandler(async (req, res) => {
+    const {id, riderId} = req.params;
+    const rider = await Rider.findOne({where: {event_id: id, user_id: riderId}});
+    if (rider){
+        await Rider.delete(rider);
+        const riders = await Rider.findAll({where: {event_id: id}});
+        return res.json(riders);
+    }
+}));
 
 module.exports = router;

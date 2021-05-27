@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     Sport.hasMany(models.Trick, {foreignKey: 'sport_id'});
     Sport.hasMany(models.Event, {foreignKey: 'sport_id'});
-    Sport.hasMany(models.Rider, {foreignKey: "sport_id"});
   };
   return Sport;
 };
