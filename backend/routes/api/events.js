@@ -74,5 +74,10 @@ router.post('/', asyncHandler(async (req, res) => {
     return res.json(event);
 }));
 
+router.get('/dates', asyncHandler(async (req, res) => {
+    const events = await Event.findAll({order: [['when', 'ASC']]})
+    console.log(events);
+    return res.json(events);
+}))
 
 module.exports = router;

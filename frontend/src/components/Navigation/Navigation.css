@@ -28,6 +28,8 @@ body {
     padding: .5em;
     border-radius: .3rem;
     width: fit-content;
+    border: 1px solid yellowgreen;
+
 }
 
 .nav-link:hover {
