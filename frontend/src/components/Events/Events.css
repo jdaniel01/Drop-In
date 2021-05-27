@@ -27,4 +27,21 @@
     font-size: large;
 }
 
+.body-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
 
+.image-wrapper {
+    padding: 1em;
+}
+
+.event-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
