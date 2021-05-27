@@ -113,8 +113,9 @@ const NewEvent = () => {
             when: date
         }
 
-        await dispatch(addOneEvent(event));
+        let newEvent = await dispatch(addOneEvent(event));
         //TODO Need to redirect the member to the event page.
+        console.log(newEvent);
     };
 
 

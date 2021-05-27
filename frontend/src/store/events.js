@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 export const LOAD_EVENTS = 'events/LOAD_EVENTS';
 export const ADD_EVENT = 'events/ADD_EVENT';
 export const LOAD_DATES = 'events/LOAD_DATES';
+export const SELECT_EVENT = 'events/SELECT_EVENT';
 
 const loadEvents = (events) => ({
     type: LOAD_EVENTS,
@@ -16,6 +17,11 @@ export const loadDates = (events) => ({
 
 export const addEvent = event => ({
     type: ADD_EVENT,
+    event
+});
+
+export const selectEvent = event => ({
+    type: SELECT_EVENT,
     event
 });
 
@@ -34,6 +40,17 @@ export const loadEventsByDate = () => async dispatch => {
     if (response.ok) {
         const events = await response.json();
         dispatch(loadDates(events));
+        return events;
+    }
+}
+
+export const selectOneEvent = (id) => async dispatch => {
+    const response = await csrfFetch(`/api/events/${id}`);
+
+    if (response.ok) {
+        const event = await response.json();
+        dispatch(selectEvent(event));
+        return event;
     }
 }
 
@@ -74,6 +91,9 @@ const eventsReducer = (state = initialState, action) => {
                 newEvents[event.id] = event;
             })
             return { ...state, ...newEvents };
+        }
+        case SELECT_EVENT: {
+            return action.event;
         }
         default:
             return state;

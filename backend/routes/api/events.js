@@ -75,9 +75,13 @@ router.post('/', asyncHandler(async (req, res) => {
 }));
 
 router.get('/dates', asyncHandler(async (req, res) => {
-    const events = await Event.findAll({order: [['when', 'ASC']]})
-    console.log(events);
+    const events = await Event.findAll({order: ['when'], limit: 20, include: [User, Location]})
     return res.json(events);
+}))
+
+router.get('/:id', asyncHandler(async (req, res) => {
+    const event = await Event.findByPk(req.params.id);
+    return res.json(event);
 }))
 
 module.exports = router;

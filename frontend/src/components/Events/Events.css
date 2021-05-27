@@ -8,7 +8,7 @@
 
 .event-form {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     width: 50%;
     padding: 2em;
     background-color: yellowgreen;
@@ -26,3 +26,5 @@
     justify-content: center;
     font-size: large;
 }
+
+

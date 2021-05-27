@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     Country.hasMany(models.State, {foreignKey: 'country_id'});
     Country.hasMany(models.City, {foreignKey: 'country_id'});
     Country.hasMany(models.Location, {foreignKey: 'country_id'});
-    Country.hasMany(models.Event, {foreignKey: 'country_id'})
   };
   return Country;
 };

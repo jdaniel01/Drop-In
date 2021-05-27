@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     City.belongsTo(models.Country, {foreignKey: 'country_id'});
     City.belongsTo(models.State, {foreignKey: 'state_id'})
-    City.hasMany(models.Event, {foreignKey: 'city_id'})
     City.hasMany(models.Location, {foreignKey: 'city_id'})
   };
   return City;
