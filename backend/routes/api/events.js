@@ -1,7 +1,6 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check } = require('express-validator');
-const { noExtendLeft } = require('sequelize/types/lib/operators');
 const { Rider, Event, User, Sport, Location, Country, City, State } = require('../../db/models');
 const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
