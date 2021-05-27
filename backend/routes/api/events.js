@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check } = require('express-validator');
-const { Event, User, Sport, Location } = require('../../db/models');
+const { Event, User, Sport, Location, Country, City, State } = require('../../db/models');
 const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
@@ -80,8 +80,9 @@ router.get('/dates', asyncHandler(async (req, res) => {
 }))
 
 router.get('/:id', asyncHandler(async (req, res) => {
-    const event = await Event.findByPk(req.params.id);
-    return res.json(event);
+    const event = await Event.findOne({where: {id: req.params.id}, include: [User, Location, Sport]});
+    const location = await Location.findOne({where: {id: event.location_id}, include: [Country, City, State]})
+    return res.json({event, location});
 }))
 
 module.exports = router;

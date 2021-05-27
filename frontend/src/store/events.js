@@ -93,7 +93,7 @@ const eventsReducer = (state = initialState, action) => {
             return { ...state, ...newEvents };
         }
         case SELECT_EVENT: {
-            return action.event;
+           return action.event;
         }
         default:
             return state;

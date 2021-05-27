@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const {check} = require('express-validator');
-const {Location} = require('../../db/models');
+const {Location, Country, City, State} = require('../../db/models');
 const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
@@ -59,7 +59,7 @@ router.post('/', validateLocation, asyncHandler(async (req, res)=> {
 
 router.get('/:id', asyncHandler(async (req, res) => {
     const {id} = req.params;
-    const location = await Location.findByPk(id);
+    const location = await Location.findOne({where: {id}, include: [Country, City, State]});
     return res.json(location);
 }));
 
