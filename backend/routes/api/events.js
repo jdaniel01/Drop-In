@@ -58,7 +58,7 @@ const validateEvent = [
         .isDate()
         .withMessage("You must provide a date with the correct format."),
     check('description')
-        .exists({checkFalsy:true})
+        .exists({ checkFalsy: true })
         .withMessage("Please provide a description for your session."),
     handleValidationErrors
 ];
@@ -69,10 +69,8 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 router.post('/', asyncHandler(async (req, res) => {
-    console.log(req.body.parameters);
-    const { host, name, sport_id, location_id, when } = req.body;
-    let event = await Event.create({ host, name, sport_id, location_id, when });
-    console.log(event);
+    const { host, name, sport_id, location_id, description, when } = req.body;
+    let event = await Event.create({ host, name, sport_id, description, location_id, when });
     return res.json(event);
 }));
 

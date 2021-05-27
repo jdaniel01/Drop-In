@@ -24,7 +24,6 @@ export const getEvents = () => async dispatch => {
 
 
 export const addOneEvent = event => async dispatch => {
-    console.log(event);
     const response = await csrfFetch('/api/events', {
         method: "POST",
         headers: {
@@ -33,7 +32,6 @@ export const addOneEvent = event => async dispatch => {
         body: JSON.stringify(event)
     })
     if (response.ok) {
-        console.log(response.json());
         const event = await response.json();
         dispatch(addEvent(event));
     }

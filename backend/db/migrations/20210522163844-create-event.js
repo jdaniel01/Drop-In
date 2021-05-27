@@ -18,6 +18,10 @@ module.exports = {
         allowNull: false,
         unique: true
       },
+      description: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       location_id: {
         type: Sequelize.INTEGER,
         references: {model: "Locations"},

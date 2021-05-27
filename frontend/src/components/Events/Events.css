@@ -16,3 +16,13 @@
     border-radius: .3rem;
     box-shadow: 0px 0px 5em 1em lightslategray;
 }
+
+.errors {
+    color: red;
+    margin-bottom: 4em;
+    margin-top: -2em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-size: large;
+}

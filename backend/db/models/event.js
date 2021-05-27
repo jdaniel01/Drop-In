@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
         len: [3, 50]
       }
     },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     sport_id:{
       type: DataTypes.INTEGER,
       allowNull: false,

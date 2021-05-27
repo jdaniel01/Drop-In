@@ -12,7 +12,6 @@ export const getLocations = (id) => async dispatch => {
 
     if(response.ok) {
         const locations = await response.json();
-        console.log(locations);
         dispatch(loadLocations(locations));
     }
 };
