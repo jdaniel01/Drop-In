@@ -69,7 +69,7 @@ module.exports = (sequelize, DataTypes) => {
       return await User.scope('currentUser').findByPk(user.id);
     }
   };
-  User.signup = async function ({username, email, password}) {
+  User.signup = async function ({ username, email, password }) {
     const hashedPassword = bcrypt.hashSync(password);
     const user = await User.create({
       username,
@@ -80,7 +80,9 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.associate = function (models) {
     // associations can be defined here
-    User.hasMany(models.Event, {foreignKey: 'host'});
+    User.hasMany(models.Event, { foreignKey: 'host' });
+    User.hasMany(models.Ability, {foreignKey: "user_id"});
+    User.hasMany(models.Rider, {foreingKey: "user_id"});
   };
   return User;
 };

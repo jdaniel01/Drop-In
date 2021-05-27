@@ -42,7 +42,7 @@ const Home = () => {
                         <div className="session-detail">
                             <h4>Host: {event.User?.username}</h4>
                             <h4>Where: {event.Location?.name}</h4>
-                            <h4>When: {event.when.split('T')[0]}</h4>
+                            <h4>When: {event.when?.split('T')[0]}</h4>
                             <h4> Details: {event.description}</h4>
                         </div>
                     </div>

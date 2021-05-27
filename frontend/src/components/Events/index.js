@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { selectOneEvent } from '../../store/events';
+import { joinSession } from '../../store/attendees';
 import { useEffect, useState } from 'react';
 import './Events.css';
 
@@ -8,6 +9,7 @@ const Event = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const { id } = useParams();
+    const user = useSelector(state => state.session.user)
     const eventLocation = useSelector(state => state.events);
     const [event, setEvent] = useState(eventLocation.event);
     const [location, setLocation] = useState(eventLocation.location);
@@ -23,16 +25,21 @@ const Event = () => {
 
     return (
         <div className="body-wrapper">
-            <div className="event-wrapper">
+            <div className="event-wrapper_event">
                 <h1>{event?.name}</h1>
-                <h2 onClick={() => history.push(`/users/${event?.User.id}`)}>Host: {event?.User.username}</h2>
-                <h3>Joined By: {"Add riders"}</h3>
-                <h4 onClick={() => history.push(`/locations/${location?.id}`)}>Where: {location?.name} ({location?.City.name},{location?.State.name}, {location?.Country.abbrv})</h4>
+                <h3>Host:</h3>
+                <h2 onClick={() => history.push(`/users/${event?.User.id}`)}>{event?.User.username}</h2>
+                <h3>Joined By:</h3>
+                <p>{"Add riders"}</p>
+                <h3>Where:</h3>
+                <h2 onClick={() => history.push(`/locations/${location?.id}`)}> {location?.name}</h2>
+                <p>({location?.City.name},{location?.State.name}, {location?.Country.abbrv})</p>
                 <h3>Session Details:</h3>
                 <div>{event?.description}</div>
             </div>
+            <div onClick={() => dispatch(joinSession(user))}>Join Session</div>
             <div className="image-wrapper">
-                <img src={location?.image}/>
+                <img src={location?.image} />
             </div>
         </div>
     );

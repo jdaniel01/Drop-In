@@ -40,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     Event.belongsTo(models.User, {foreignKey: 'host'});
     Event.belongsTo(models.Location, {foreignKey: 'location_id'});
     Event.belongsTo(models.Sport, {foreignKey: 'sport_id'});
+    Event.hasMany(models.Rider, {foreignKey: "event_id"});
   };
   return Event;
 };

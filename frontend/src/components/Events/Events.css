@@ -18,6 +18,7 @@
 }
 
 .errors {
+    display: flex;
     color: red;
     margin-bottom: 4em;
     margin-top: -2em;
@@ -36,12 +37,35 @@
 }
 
 .image-wrapper {
+    display: flex;
     padding: 1em;
 }
 
-.event-wrapper {
+.event-wrapper_event {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    background-color: yellowgreen;
+    width: fit-content;
+    padding: 1em;
+    border: .5em solid indianred;
+    border-radius: .3em;
+}
+
+h3 {
+    display: flex;
+    color: indianred;
+}
+
+h2:hover {
+    display: flex;
+    color: indigo;
+    text-decoration: underline;
+}
+
+h2 {
+    display: flex;
+    height: fit-content;
+    margin: 0px;
 }

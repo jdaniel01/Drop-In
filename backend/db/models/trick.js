@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     Trick.belongsTo(models.Sport, {foreignKey: 'sport_id'});
     Trick.belongsTo(models.Category, {foreignKey: 'category_id'})
+    Trick.hasMany(models.Ability, {foreignKey: "trick_id"});
   };
   return Trick;
 };
