@@ -77,7 +77,7 @@ const eventsReducer = (state = initialState, action) => {
             action.events.forEach(event => {
                 newEvents[event.id] = event;
             });
-            return { ...state, ...newEvents }
+            return {...newEvents }
         }
         case ADD_EVENT: {
             const newEvent = {
@@ -90,7 +90,7 @@ const eventsReducer = (state = initialState, action) => {
             action.events.forEach(event => {
                 newEvents[event.id] = event;
             })
-            return { ...state, ...newEvents };
+            return {...newEvents };
         }
         case SELECT_EVENT: {
            return action.event;

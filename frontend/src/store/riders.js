@@ -71,14 +71,14 @@ const ridersReducer = (state = initialState, action) => {
             action.riders.forEach(rider => {
                 newRiders[rider.id] = rider;
             })
-            return {...state, ...newRiders};
+            return {...newRiders};
         }
         case ADD_RIDER: {
             const newRiders = {};
             action.riders.forEach(rider => {
                 newRiders[rider.id] = rider;
             })
-            return {...state, ...newRiders};
+            return {...newRiders};
         }
         case DROP_RIDER: {
             const newRiders = {};

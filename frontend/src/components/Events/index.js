@@ -28,9 +28,10 @@ const Event = () => {
     useEffect(() => {
         setEvent(eventLocation.event);
         setLocation(eventLocation.location);
-        setAllRiders(riders);
+        if(!allRiders){
+            setAllRiders(riders);
+        }
     }, [eventLocation])
-
 
     return (
         <div className="body-wrapper">

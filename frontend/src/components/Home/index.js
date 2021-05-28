@@ -17,15 +17,15 @@ const Home = () => {
 
 
     useEffect(() => {
-        
         dispatch(loadEventsByDate())
-
         setAllEvents(eventsByDate)
     }, [dispatch])
 
     useEffect(() => {
+        if(!allEvents){
         setAllEvents(eventsByDate)
-    }, [allEvents])
+        }
+    }, [eventsByDate])
 
     return (
         <div className="home-wrapper">

@@ -25,7 +25,7 @@ const tricksReducer = (state = initialState, action) => {
             action.tricks.forEach(trick => {
                 tricks[trick.id] = trick;
             });
-            return {...state, ...tricks}
+            return {...tricks}
         }
         default:
             return state;

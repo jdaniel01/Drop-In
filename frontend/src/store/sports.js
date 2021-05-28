@@ -25,7 +25,7 @@ const sportsReducer = (state = initialState, action) => {
             action.sports.forEach(sport => {
                 newSports[sport.id] = sport;
             });
-            return { ...state, ...newSports }
+            return { ...newSports }
         }
         default:
             return state;

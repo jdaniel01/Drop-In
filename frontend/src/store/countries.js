@@ -27,7 +27,7 @@ const countriesReducer = (state = initialState, action) => {
             action.countries.forEach(country => {
                 newCountries[country.id] = country;
             });
-            return { ...state, ...newCountries }
+            return {...newCountries }
         }
         default:
             return state;
