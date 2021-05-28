@@ -118,7 +118,7 @@ const NewEvent = () => {
         let newEvent = await dispatch(addOneEvent(event));
         //TODO Need to redirect the member to the event page.
         dispatch(addOneRider(addedEvent.id, sessionUser))
-        history.push(`/events/${addedEvent.id}`)
+        history.push(`/events/${addedEvent?.id}`)
     };
 
 

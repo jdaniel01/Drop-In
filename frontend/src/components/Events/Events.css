@@ -33,7 +33,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 2em;
 }
 
 .image-wrapper {
@@ -48,6 +48,7 @@
     justify-content: center;
     background-color: yellowgreen;
     width: fit-content;
+    max-width: 90%;
     padding: 1em;
     border: .5em solid indianred;
     border-radius: .3em;
@@ -68,4 +69,29 @@ h2 {
     display: flex;
     height: fit-content;
     margin: 0px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border-radius: .3rem;
+    width: fit-content;
+    border: 1px solid indianred;
+    background-color: lightskyblue;
+}
+
+.nav-link:hover {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border: 1px solid indianred;
+    background-color: rgb(250, 225, 4);
+    border-radius: .3em;
+}
+
+div.link:hover {
+    display: flex;
+    color: indigo;
+    text-decoration: underline;
 }

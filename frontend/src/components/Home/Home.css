@@ -2,7 +2,8 @@
 .link-component {
     display: flex;
     justify-content: center;
-    flex-flow: column nowrap;
+    align-items: center;
+    flex-flow: column wrap;
     background-color: yellowgreen;
     border: .5em solid indianred;
     border-radius: .3rem;
@@ -52,4 +53,24 @@
 
 .event-details {
     position: static;
+}
+
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border-radius: .3rem;
+    width: fit-content;
+    border: 1px solid indianred;
+    background-color: lightskyblue;
+}
+
+.nav-link:hover {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border: 1px solid indianred;
+    background-color: rgb(250, 225, 4);
+    border-radius: .3em;
 }

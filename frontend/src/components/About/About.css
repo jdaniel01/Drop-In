@@ -26,9 +26,10 @@
     padding: .5em;
     border-radius: .3rem;
     width: fit-content;
-    border: 1px solid yellowgreen;
-}
+    border: 1px solid indianred;
+    background-color: lightskyblue;
 
+}
 
 .nav-link:hover {
     display: flex;

@@ -28,10 +28,14 @@ const Event = () => {
     useEffect(() => {
         setEvent(eventLocation.event);
         setLocation(eventLocation.location);
-        if(!allRiders){
+        if (!allRiders) {
             setAllRiders(riders);
         }
     }, [eventLocation])
+
+    useEffect(() => {
+        
+    })
 
     return (
         <div className="body-wrapper">
@@ -40,26 +44,27 @@ const Event = () => {
                 <h3>Host:</h3>
                 <h2 onClick={() => history.push(`/users/${event?.User.id}`)}>{event?.User.username}</h2>
                 <h3>Joined By:</h3>
-                <ul>
-                    {riders.map(rider => <li key={rider?.user_id}>{rider?.User?.username}</li>)}
-                </ul>
+
+                {riders.map(rider => <div className="link" key={rider?.user_id} onClick={() => history.push(`/users/${rider?.user_id}`)}>{rider?.User?.username}</div>)}
+
                 <h3>Where:</h3>
                 <h2 onClick={() => history.push(`/locations/${location?.id}`)}> {location?.name}</h2>
                 <p>({location?.City.name},{location?.State.name}, {location?.Country.abbrv})</p>
                 <h3>Session Details:</h3>
                 <div>{event?.description}</div>
-            </div>
-            <div onClick={() => {
-                if (event?.id && user) {
-                    console.log(event.id, user);
-                    dispatch(addOneRider(event?.id, user))
-                }
-                else {
-                    window.alert("Error on the homefront");
-                }
-            }}>Join Session</div>
-            <div className="image-wrapper">
-                <img src={location?.image} />
+                <p></p>
+                <div className="nav-link" onClick={() => {
+                    if (event?.id && user) {
+                        console.log(event.id, user);
+                        dispatch(addOneRider(event?.id, user))
+                    }
+                    else {
+                        window.alert("Error on the homefront");
+                    }
+                }}>Join Session</div>
+                <div className="image-wrapper">
+                    <img src={location?.image} />
+                </div>
             </div>
         </div>
     );

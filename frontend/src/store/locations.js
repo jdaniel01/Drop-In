@@ -28,6 +28,7 @@ export const selectLocation = id => async dispatch => {
     if (response.ok) {
         const location = await response.json();
         dispatch(selectLocal(location));
+        return location;
     }
 }
 
@@ -43,11 +44,11 @@ const locationsReducer = (state = initialState, action) => {
             return newLocations;
         }
         case SELECT_LOCATION: {
-            const newLocation = {};
-            action.location.forEach(location => {
-                newLocation[location.id] = location;
-            });
-            return newLocation;
+            // const newLocation = {};
+            // action.location.forEach(location => {
+            //     newLocation[location.id] = location;
+            // });
+            return action.location;
         }
         default:
             return state;

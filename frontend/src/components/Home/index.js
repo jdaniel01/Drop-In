@@ -22,8 +22,8 @@ const Home = () => {
     }, [dispatch])
 
     useEffect(() => {
-        if(!allEvents){
-        setAllEvents(eventsByDate)
+        if (!allEvents) {
+            setAllEvents(eventsByDate)
         }
     }, [eventsByDate])
 
@@ -31,7 +31,6 @@ const Home = () => {
         <div className="home-wrapper">
 
             <div className="link-component">
-                <h2 className="h2">Don't Shred Alone!</h2>
                 <div className="nav-link button" onClick={() => {
                     if (sessionUser) {
                         history.push('/events/new')
@@ -41,6 +40,7 @@ const Home = () => {
                 }}>
                     Host A Session
                     </div>
+                <h1 className="h2">Don't Shred Alone!</h1>
             </div>
             <p />
             <div className="all-events-wrapper">

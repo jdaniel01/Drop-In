@@ -8,6 +8,7 @@ import Home from './components/Home';
 import NewEvent from './components/Events/NewEvent';
 import About from './components/About';
 import Event from './components/Events';
+import Location from './components/Locations';
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/events/:id">
             <Event/>
+          </Route>
+          <Route path='/locations/:id'>
+            <Location/>
           </Route>
         </Switch>
       )}
