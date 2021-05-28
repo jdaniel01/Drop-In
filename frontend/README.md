@@ -1,4 +1,106 @@
 
+
+Abstract:
+
+'Drop-In' is a "Meet-Up" clone using React, Redux, Express, and Javascript. Here, end-users are able to
+search for upcoming events called 'sessions', see details about the session and if they choose, join the session. Users can also create their own session for others to join. 'Drop-In' differs from "Meet-Up" in that the focus is to bring extreme sprts enthusiasts together while sharing their knowledge in the sport. As a User you can identify with different sports (BMX, skateboarding, etc.) and add 'tricks' to their repertoire, which is displayed on their profile page, as both a way to show off their knowledge and to let potential 'riders' know their skillset. This is great because now you know what tricks you can learn from others, teach to others or simply compete against with others. "Drop-In" adds fun to already exciting sports while simultaneously promoting them. Whether you're new to a sport or an experienced shredder, get out there with 'drop-in'.
+
+Seriously... What are you waiting for, go register and get some!
+
+
+
+MVPs:
+
+1. Users can register, log-in and log-out. Their (browswer) session persists from page to page. Users can view their 'trick-list' on their profile page or see others' abilities by jumping to theirs.
+
+2. Logged in users can create or join an 'event' called a "session", specifying the contry, city, state, and location of the session. Before joining a session, Users are able to see who has joined, with clickable links to each profile and tricklist, and other details about the session. Session locations are clickable links which redirect the user to the location page where they have a clickable link to create a session at the specific location or join the one they were viewing previously (if coming directly from an event page.).
+
+3. Users are able to search for events based on the names or details of the follow: session, location, city, state, country, riders.  Search results can be ordered by the same and are rendered on the splash page.
+
+4. Users are able to perform CRUD operations on locations they created, their own tricklist. These are viewable on their profile page.
+
+5. Users are able to invite riders to a session. Invitations are shown on a member's profile page and as a notification (number of messages) is displayed in the navigation panel.
+
+6. Users who have joined a session are able to perform CRUD operations on comments they create and read and reply comments that others posts.
+
+7. Users are able to rate a session they have previously attended through a voluntary review survey available after the session is over.
+
+
+Database design:
+
+A) Tables:
+
+1. Users - the users table is the most important as it's necessary for anything on the website to happen. If there isn't a user there isn't any sessions, riders, tricklists, or communication between riders of any kind.
+
+2. Country - default data. no dependencies.
+
+3. State - default data. Belongs to: Country.
+
+4. City - default data. Belongs to: Country, State.
+
+5. Location - default data.  Belongs to: Country, State, City.
+
+2. Abilities - these are the tricks a user knows (tricklist). Abilities are a joins table between Users and Tricks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Create React App Template
 
 A no-frills template from which to create React + Redux applications with
@@ -74,12 +176,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-READ ME Start:
-
-Database design:
-
-A) Tables:
-

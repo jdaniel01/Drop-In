@@ -2,9 +2,8 @@ import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { loadEventsByDate } from '../../store/events';
 import { useEffect, useState } from 'react';
-
-
 import './Home.css';
+
 
 const Home = () => {
     const history = useHistory();
@@ -50,10 +49,14 @@ const Home = () => {
                     }>
                         <h3 className="session-title">{event.name}</h3>
                         <div className="session-detail">
-                            <h4>Host: {event.User?.username}</h4>
-                            <h4>Where: {event.Location?.name}</h4>
-                            <h4>When: {event.when?.split('T')[0]}</h4>
-                            <h4> Details: {event.description}</h4>
+                            <h3>Host: </h3>
+                            <h2>{event.User?.username}</h2>
+                            <h3>Where: </h3>
+                            <h2>{event.Location?.name}</h2>
+                            <h3>When: </h3>
+                            <h4>{event.when?.split('T')[0]}</h4>
+                            <h3> Details: </h3>
+                            <p>{event.description}</p>
                         </div>
                     </div>
                 ))}
