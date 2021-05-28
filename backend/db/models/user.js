@@ -83,6 +83,7 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Event, { foreignKey: 'host' });
     User.hasMany(models.Ability, {foreignKey: "user_id"});
     User.hasMany(models.Rider, {foreignKey: "user_id"});
+    User.hasMany(models.Stat, {foreignKey: "user_id"})
   };
   return User;
 };

@@ -3,7 +3,7 @@ const asyncHandler = require('express-async-handler');
 const {check} = require('express-validator');
 const {handleValidationErrors} = require('../../utils/validation');
 const {setTokenCookie, requireAuth} = require('../../utils/auth');
-const {User} = require('../../db/models');
+const {User, Stat, Trick} = require('../../db/models');
 const router = express.Router();
 
 const validateSignup = [
@@ -38,7 +38,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
     const id = req.params.id;
 
     const user = await User.findByPk(id);
-    const 
+    const trickList = await Stat.findAll({where: {user_id: user.id}, include: Trick})
 }));
 
 module.exports = router;

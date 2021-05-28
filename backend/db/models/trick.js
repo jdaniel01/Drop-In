@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     Trick.belongsTo(models.Sport, {foreignKey: 'sport_id'});
     Trick.belongsTo(models.Category, {foreignKey: 'category_id'})
     Trick.hasMany(models.Ability, {foreignKey: "trick_id"});
+    Trick.hasMany(models.Stat, {foreignKey: 'trick_id'});
   };
   return Trick;
 };
