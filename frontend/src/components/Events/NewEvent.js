@@ -20,6 +20,7 @@ const NewEvent = () => {
     const states = useSelector(state => Object.values(state.states));
     const cities = useSelector(state => Object.values(state.cities));
     const locations = useSelector(state => Object.values(state.locations));
+    const addedEvent = useSelector(state => Object.values(state.events)[Object.values(state.events).length - 1]);
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -116,7 +117,8 @@ const NewEvent = () => {
 
         let newEvent = await dispatch(addOneEvent(event));
         //TODO Need to redirect the member to the event page.
-        await dispatch(addOneRider(newEvent?.id, sessionUser))
+        dispatch(addOneRider(addedEvent.id, sessionUser))
+        history.push(`/events/${addedEvent.id}`)
     };
 
 
