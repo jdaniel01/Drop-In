@@ -31,10 +31,10 @@ const Event = () => {
         if (!allRiders) {
             setAllRiders(riders);
         }
-    }, [eventLocation])
+    }, [eventLocation, allRiders])
 
     useEffect(() => {
-        
+
     })
 
     return (

@@ -9,6 +9,7 @@ import NewEvent from './components/Events/NewEvent';
 import About from './components/About';
 import Event from './components/Events';
 import Location from './components/Locations';
+import Profile from './components/Users';
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path='/locations/:id'>
             <Location/>
+          </Route>
+          <Route path='/users/:id'>
+            <Profile/>
           </Route>
         </Switch>
       )}

@@ -8,10 +8,10 @@ const loadProfile = (profile) => ({
 });
 
 export const getProfile = (id) => async dispatch => {
-    const response = await csrfFetch(`/api/users/profile/${id}`);
+    const response = await csrfFetch(`/api/users/${id}`);
 
     if (response.ok) {
-        const profile = response.json();
+        const profile = await response.json();
         dispatch(loadProfile(profile));
         return profile;
     }
@@ -22,7 +22,7 @@ const initialState = {}
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOAD_PROFILE: {
-            return state;
+            return {...state, ...action.profile};
         }
         default:
             return state;

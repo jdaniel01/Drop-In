@@ -103,7 +103,7 @@ const NewEvent = () => {
     }, [name, date, description, location, sport, state1, country, city])
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         const event = {
@@ -115,7 +115,7 @@ const NewEvent = () => {
             when: date
         }
 
-        let newEvent = await dispatch(addOneEvent(event));
+        dispatch(addOneEvent(event));
         //TODO Need to redirect the member to the event page.
         dispatch(addOneRider(addedEvent.id, sessionUser))
         history.push(`/events/${addedEvent?.id}`)

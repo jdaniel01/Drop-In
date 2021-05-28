@@ -1,44 +1,48 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const {check} = require('express-validator');
-const {handleValidationErrors} = require('../../utils/validation');
-const {setTokenCookie, requireAuth} = require('../../utils/auth');
-const {User, Stat, Trick} = require('../../db/models');
+const { check } = require('express-validator');
+const { handleValidationErrors } = require('../../utils/validation');
+const { setTokenCookie, requireAuth } = require('../../utils/auth');
+const { User, Ability, Event, Trick, Rider } = require('../../db/models');
 const router = express.Router();
 
 const validateSignup = [
     check('email')
-        .exists({checkFalsey: true})
+        .exists({ checkFalsey: true })
         .isEmail()
         .withMessage('Please provide a valid email.'),
     check('username')
-        .exists({checkFalsey: true})
-        .isLength({min: 4})
+        .exists({ checkFalsey: true })
+        .isLength({ min: 4 })
         .withMessage('Please provide a username with at least 4 characters'),
     check('username')
         .not()
         .isEmail()
         .withMessage('Username cannot be an email address.'),
     check('password')
-        .exists({checkFalsey: true})
-        .isLength({min: 6})
+        .exists({ checkFalsey: true })
+        .isLength({ min: 6 })
         .withMessage('Password must contain 6 or more characters.'),
     handleValidationErrors
 ];
 
 router.post('/', validateSignup, asyncHandler(async (req, res) => {
-    const {email, password, username} = req.body;
-    const user = await  User.signup({email, username, password});
+    const { email, password, username } = req.body;
+    const user = await User.signup({ email, username, password });
 
     await setTokenCookie(res, user);
-    return res.json({user});
+    return res.json({ user });
 }));
 
 router.get('/:id', asyncHandler(async (req, res) => {
     const id = req.params.id;
 
     const user = await User.findByPk(id);
-    const trickList = await Stat.findAll({where: {user_id: user.id}, include: Trick})
+    const trickList = await Ability.findAll({ where: { user_id: id }, include: Trick })
+    const sessions = await Rider.findAll({ where: { user_id: id }, include: Event });
+
+    return res.json({user, trickList, sessions})
+
 }));
 
 module.exports = router;
