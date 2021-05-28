@@ -20,15 +20,17 @@
 }
 .all-events-wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-flow: row wrap;
     width: 80%;
-    border: .5em solid indianred;
     border-radius: .3em;}
 
 .event-wrapper {
     background-color: rgb(250, 225, 4);
     width: 25%;
     padding-top: none;
+    border-radius: 1em;
 }
 
 .event-wrapper:hover {
@@ -38,7 +40,7 @@
 
 }
 .event-wrapper:hover > h3 {
-    background-color: lightskyblue;
+    background-color: indigo;
     margin-top: 0px;
     display: flex;
     justify-content: center;
@@ -49,6 +51,7 @@
     margin-top: 0px;
     display: flex;
     justify-content: center;
+
 }
 
 .event-details {

@@ -25,12 +25,18 @@ function Navigation({ isLoaded }) {
     }
 
     return (
-        <div>
+        <div className="header">
             <nav className="nav-wrapper">
-                <div className="nav-link" onClick={() => history.push('/about')}>About</div>
-                {isLoaded && sessionLinks}
+                <div className="search-bar">
+                    <h1>Search: </h1>
+                    <input type="search" placeholder="TODO: Implement Search Functionality" />
+                </div>
+                <div className="user-links">
+                    <div className="nav-link" onClick={() => history.push('/about')}>About</div>
+                    {isLoaded && sessionLinks}
+                </div>
             </nav>
-            <div className="logo-wrapper">
+            <div className="logo-wrapper animate__animated animate__backInDown">
                 <img className="logo" src={fullLogo} onClick={() => history.push('/')} alt="Drop-In logo with 3 silhouettes. One skateboarder, one BMX rider, one scooter rider." />
             </div>
         </div>

@@ -10,6 +10,7 @@ import About from './components/About';
 import Event from './components/Events';
 import Location from './components/Locations';
 import Profile from './components/Users';
+import Footer from './components/Navigation/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ function App() {
           </Route>
         </Switch>
       )}
+      <Footer/>
     </>
   );
 }
