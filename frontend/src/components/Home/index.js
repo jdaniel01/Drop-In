@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { loadEventsByDate } from '../../store/events';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 import './Home.css';
@@ -13,9 +13,19 @@ const Home = () => {
     const sessionUser = useSelector(state => state.session.user);
     const eventsByDate = useSelector(state => Object.values(state.events));
 
+    const [allEvents, setAllEvents] = useState(eventsByDate);
+
+
     useEffect(() => {
-        dispatch(loadEventsByDate());
+        
+        dispatch(loadEventsByDate())
+
+        setAllEvents(eventsByDate)
     }, [dispatch])
+
+    useEffect(() => {
+        setAllEvents(eventsByDate)
+    }, [allEvents])
 
     return (
         <div className="home-wrapper">

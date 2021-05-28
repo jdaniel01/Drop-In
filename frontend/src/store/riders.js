@@ -27,6 +27,7 @@ export const getRiders = (id) => async dispatch => {
     if (response.ok) {
         const riders = await response.json();
         dispatch(loadRiders(riders));
+        return riders;
     }
 };
 
@@ -40,8 +41,10 @@ export const addOneRider = (id, user) => async dispatch => {
     });
     if (response.ok) {
         //Should get back all riders
+
         const riders = await response.json();
         dispatch(loadRiders(riders));
+        return riders;
     }
 
 }
@@ -54,6 +57,7 @@ export const dropOneRider = (id, rider) => async dispatch => {
         //Should get back all riders
         const riders = await response.json();
         dispatch(loadRiders(riders));
+        return riders;
     }
 
 }

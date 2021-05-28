@@ -9,6 +9,7 @@ import { getSports } from '../../store/sports';
 import { addOneEvent } from '../../store/events';
 import './Events.css';
 import { v4 as uuidv4 } from 'uuid';
+import { addOneRider } from '../../store/riders';
 
 const NewEvent = () => {
 
@@ -115,7 +116,7 @@ const NewEvent = () => {
 
         let newEvent = await dispatch(addOneEvent(event));
         //TODO Need to redirect the member to the event page.
-        console.log(newEvent);
+        await dispatch(addOneRider(newEvent?.id, sessionUser))
     };
 
 

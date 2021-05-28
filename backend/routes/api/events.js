@@ -87,17 +87,18 @@ router.get('/:id', asyncHandler(async (req, res) => {
 
 router.get('/:id/riders', asyncHandler(async (req, res) => {
     const id = req.params.id;
-    const riders = await Rider.findAll({ where: { event_id: id } });
+    const riders = await Rider.findAll({ where: { event_id: id }, include: User });
     return res.json(riders);
 }));
 
 router.post('/:id/riders', asyncHandler(async (req, res, next) => {
-    const id = req.params.id;
-    const { user } = req.body;
+    const {id} = req.params;
+    const user = req.body;
+
     let test = await Rider.findOne({ where: { event_id: id, user_id: user.id } });
     if (!test) {
         await Rider.create({ user_id: user.id, event_id: id })
-        const riders = await Rider.findAll({ where: { event_id: id } });
+        const riders = await Rider.findAll({ where: { event_id: id }, include: User });
         return res.json(riders);
     }
     else {
@@ -111,7 +112,7 @@ router.delete('/:id/riders/:riderId', asyncHandler(async (req, res) => {
     const rider = await Rider.findOne({where: {event_id: id, user_id: riderId}});
     if (rider){
         await Rider.delete(rider);
-        const riders = await Rider.findAll({where: {event_id: id}});
+        const riders = await Rider.findAll({where: {event_id: id}, include: User});
         return res.json(riders);
     }
 }));
